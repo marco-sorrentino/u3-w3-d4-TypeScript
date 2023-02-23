@@ -5,7 +5,7 @@ import { Detail } from "../types/detail";
 
 const CardDetail = () => {
   const params = useParams();
-  const [detail, setDetail] = useState<Detail>({});
+  const [detail, setDetail] = useState<Detail>({} as Detail);
 
   useEffect(() => {
     getData();

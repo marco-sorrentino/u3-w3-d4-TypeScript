@@ -27,10 +27,11 @@ const CardList = () => {
         {articles?.map((el) => {
           return (
             <Col md={3} key={el.id}>
-              <Card>
-                <Card.Img variant="top" src={el.imageUrl} />
+              <Card id="card">
+                <Card.Img id="img" variant="top" src={el.imageUrl} />
                 <Card.Body>
-                  <Card.Title>{el.title}</Card.Title>
+                  <Card.Title className="text-truncate">{el.title}</Card.Title>
+                  <Card.Text className="text-truncate">{el.summary}</Card.Text>
                   <Button variant="primary">
                     <Link to={"/articles/" + el.id}>READ MORE</Link>
                   </Button>
