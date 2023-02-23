@@ -26,7 +26,7 @@ const CardList = () => {
       <Row>
         {articles?.map((el) => {
           return (
-            <Col md={4} key={el.id}>
+            <Col md={6} lg={4} key={el.id}>
               <Card id="card" className="mt-3">
                 <Card.Img id="img" variant="top" src={el.imageUrl} />
                 <Card.Body className="p-4">
