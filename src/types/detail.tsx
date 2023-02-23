@@ -1,4 +1,4 @@
-export interface detail {
+export interface Detail {
   id: number;
   title: string;
   imageUrl: string;

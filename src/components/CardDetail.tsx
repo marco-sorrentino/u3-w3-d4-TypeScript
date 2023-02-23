@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import { detail } from "../types/detail";
+import { Detail } from "../types/detail";
 
 const CardDetail = () => {
   const params = useParams();
-  const [detail, setDetail] = useState<detail[]>([]);
+  const [detail, setDetail] = useState<Detail>({});
 
   useEffect(() => {
     getData();

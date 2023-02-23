@@ -26,12 +26,11 @@ const CardList = () => {
       <Row>
         {articles?.map((el) => {
           return (
-            <Col key={el.id}>
+            <Col md={3} key={el.id}>
               <Card>
                 <Card.Img variant="top" src={el.imageUrl} />
                 <Card.Body>
                   <Card.Title>{el.title}</Card.Title>
-                  <Card.Title>{el.publishedAt}</Card.Title>
                   <Button variant="primary">
                     <Link to={"/articles/" + el.id}>READ MORE</Link>
                   </Button>
