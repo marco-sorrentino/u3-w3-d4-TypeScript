@@ -13,3 +13,16 @@
   color: white;
   text-decoration: none;
 }
+
+#img-detail {
+  height: 200px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+#date {
+  color: rgb(134, 134, 134);
+  font-size: 0.7em;
+  font-weight: bold;
+}

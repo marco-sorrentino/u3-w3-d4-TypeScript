@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Detail } from "../types/detail";
 
@@ -27,19 +27,17 @@ const CardDetail = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container fluid className="">
       <Row>
-        <Col>
-          <div className="d-flex">
-            <div>
-              <img id="immagine" src={detail.imageUrl} alt="" />
-            </div>
-            <div>
-              <p>{detail.title}</p>
-              <p>data</p>
-              <p>{detail.summary}</p>
-            </div>
-          </div>
+        <Col className="p-0">
+          <Card>
+            <Card.Img id="img-detail" variant="top" src={detail.imageUrl} />
+            <Card.Body>
+              <Card.Title>{detail.title}</Card.Title>
+              <Card.Text>{detail.summary}</Card.Text>
+              <Card.Text id="date">{detail.publishedAt}</Card.Text>
+            </Card.Body>
+          </Card>
         </Col>
       </Row>
     </Container>
